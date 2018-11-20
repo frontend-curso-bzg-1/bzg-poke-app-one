@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-top-nav-bar',
@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopNavBarComponent implements OnInit {
 
+  @Output() searchTop = new EventEmitter<string>();
+
   constructor() { }
 
   ngOnInit() {
+  }
+
+  search(data :string) {
+    this.searchTop.emit(data);
   }
 
 }

@@ -1,36 +1,6 @@
 <div class="aside-header">
-    <div class="user-image">
-        <img src="http://s3.amazonaws.com/37assets/svn/765-default-avatar.png">
-    </div>
-    <div class="user-info">
-        <h3>Nombre Usuario</h3>
-    </div>
+    <app-header-aside-left [user]="user"></app-header-aside-left>
 </div>
 <div class="aside-body">
-    <ul class="nav flex-column main-menu">
-        <li class="nav-item">
-            <a class="nav-link" href="#/">
-                <i class="fa fa-tachometer" aria-hidden="true"></i>
-                <span>Inicio</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#/collections">
-                <i class="fa fa-book" aria-hidden="true"></i>
-                <span>Colección</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link">
-                <i class="fa fa-star" aria-hidden="true"></i>
-                <span>Favoritos</span>
-            </a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link">
-                <i class="fa fa-power-off" aria-hidden="true"></i>
-                <span>Salir</span>
-            </a>
-        </li>
-    </ul>
+    <app-main-menu></app-main-menu>
 </div>

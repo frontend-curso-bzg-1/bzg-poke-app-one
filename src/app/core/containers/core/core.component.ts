@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CoreComponent implements OnInit {
 
-  constructor() { }
+  dataBook: string;
+
+  constructor() { }  
 
   ngOnInit() {
+  }
+
+  searchBook(data: string){
+    this.dataBook = data;
   }
 
 }

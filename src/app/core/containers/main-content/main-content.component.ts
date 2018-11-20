@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { books } from "../../../books";
 
 @Component({
   selector: 'app-main-content',
@@ -7,9 +8,35 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
+  _dataBook: string;
+
+  @Input()
+  get dataBook(): string {
+    return this._dataBook;
+  }
+
+  set dataBook(data : string) {
+    this._dataBook = data;
+    this.search(data);
+  }
+
+  books : any[] = [];
+
   constructor() { }
 
   ngOnInit() {
+    this.books = books.items;
+  }
+
+  search(query : string) {
+    let book = this.books.find(
+      item => {
+        return item.volumeInfo.title === query;
+      }
+    );
+
+    this.books = [];
+    this.books.push(book);
   }
 
 }

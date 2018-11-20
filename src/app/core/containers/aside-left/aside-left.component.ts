@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AsideLeftComponent implements OnInit {
 
+  user: {name: string, photoUrl: string};
+
   constructor() { }
 
   ngOnInit() {
+    this.user = {
+      name: "Usuario Prueba",
+      photoUrl: "http://s3.amazonaws.com/37assets/svn/765-default-avatar.png"
+    }
   }
 
 }
