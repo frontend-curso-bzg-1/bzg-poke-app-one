@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { books } from "../../../books";
+import { PokeListService } from "../../services/poke-list.service";
+//import { books } from "../../../books";
 
 @Component({
   selector: 'app-poke-list',
@@ -10,10 +11,15 @@ export class PokeListComponent implements OnInit {
 
   books : any[] = [];
 
-  constructor() { }
+  constructor(private pokeService: PokeListService) { }
 
   ngOnInit() {
-    this.books = books.items;
+    //this.books = books.items;
+    this.pokeService.getBooks().subscribe(
+      books => {
+        this.books = books.items;
+      }
+    );
   }
 
 }

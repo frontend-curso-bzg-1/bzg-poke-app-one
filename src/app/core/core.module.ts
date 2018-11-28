@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from "@angular/router";
+import { AlertsModule } from "../alerts/alerts.module";
 import { CoreComponent } from './containers/core/core.component';
 import { TopNavBarComponent } from './containers/top-nav-bar/top-nav-bar.component';
 import { AsideLeftComponent } from './containers/aside-left/aside-left.component';
@@ -16,7 +17,8 @@ import { routes } from "./routes.core";
   declarations: [CoreComponent, TopNavBarComponent, AsideLeftComponent, MainContentComponent, HeaderAsideLeftComponent, MainMenuComponent, TopSearchFormComponent, DetailBookComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    AlertsModule
   ],
   exports: [
     CoreComponent
