@@ -1,0 +1,16 @@
+div.background-login {
+    background-image: url('../../../../assets/images/poke_background_2.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 10% 0px;
+    height: 100%;
+    background-size: cover;
+}
+
+.login-box {
+    margin: 0% auto;
+    background-color: white;
+    -webkit-box-shadow: 11px 17px 46px -1px rgba(94,93,94,1);
+    -moz-box-shadow: 11px 17px 46px -1px rgba(94,93,94,1);
+    box-shadow: 11px 17px 46px -1px rgba(94,93,94,1);
+}    

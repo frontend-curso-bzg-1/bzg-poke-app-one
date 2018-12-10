@@ -1,10 +1,12 @@
 import { Routes } from "@angular/router";
 import { CoreComponent } from "./containers/core/core.component";
+import { AuthGuardService } from "../auth/services/auth-guard.service";
 
 export const routes: Routes = [
     {
         path: 'main',
         component: CoreComponent,
+        canActivate: [AuthGuardService],
         children: [
             {
                 path: 'pokemons',

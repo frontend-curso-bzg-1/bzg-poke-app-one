@@ -1,0 +1,51 @@
+<!--
+<form (ngSubmit)="submit()" #loginForm="ngForm">
+  <div class="form-group has-feedback">
+      <input type="email" class="form-control" placeholder="Email" [(ngModel)]="login.email" required #email="ngModel" name="email" email>
+    <div [hidden]="(email.valid || email.pristine)" class="alert alert-danger" role="alert" >
+      Email Incorrecto
+    </div>    
+  </div>
+  <div class="form-group has-feedback">
+    <input type="password" class="form-control" placeholder="Password" [(ngModel)]="login.password" required #password="ngModel" name="password">
+    <div [hidden]="password.valid || password.pristine" class="alert alert-danger" role="alert" >
+      Password Requerido
+    </div>
+  </div>
+  <div class="row">    
+    
+    <div class="box-footer">
+      <button [disabled]="!loginForm.form.valid" type="submit" class="btn btn-primary">Sign In</button>
+    </div>
+    
+  </div>
+</form>
+
+<div class="social-auth-links text-center">    
+  <a class="btn btn-block btn-social btn-google" (click)="signGoogle()">
+    <i class="fa fa-google-plus"></i> Sign in using Google+
+  </a>
+</div>
+-->
+
+<form [formGroup]="loginForm" (ngSubmit)="submit()">
+  <div class="form-group has-feedback">
+      <input type="email" class="form-control" placeholder="Email" formControlName="email" required  name="email">    
+  </div>
+  <div class="form-group has-feedback">
+    <input type="password" class="form-control" placeholder="Password" formControlName="password" required  name="password">    
+  </div>
+  <div class="row">    
+    
+    <div class="box-footer">
+      <button type="submit" [disabled]="!loginForm.valid" class="btn btn-primary">Sign In</button>
+    </div>
+    
+  </div>
+</form>
+
+<div class="social-auth-links text-center">    
+  <a class="btn btn-block btn-social btn-google" (click)="signGoogle()">
+    <i class="fa fa-google-plus"></i> Sign in using Google+
+  </a>
+</div>

@@ -1,9 +1,19 @@
 // This file can be replaced during build by using the `fileReplacements` array.
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
+import { VARS_CONFIG } from "./env_vars";
 
 export const environment = {
-  production: false
+  production: false,
+  apiUrl: 'https://pokeapi.co/api/v2/',
+  firebaseConfig: {
+    apiKey: VARS_CONFIG.APIKEY,
+    authDomain: VARS_CONFIG.AUTHDOMAIN,
+    databaseURL: VARS_CONFIG.DATABASEURL,
+    projectId: VARS_CONFIG.PROJECTID,
+    storageBucket: VARS_CONFIG.STORAGEBUCKET,
+    messagingSenderId: VARS_CONFIG.MESSAGINGIDSENDER
+  }
 };
 
 /*
