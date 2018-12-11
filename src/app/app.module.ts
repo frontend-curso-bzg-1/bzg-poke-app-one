@@ -26,9 +26,9 @@ import { environment } from "../environments/environment";
     AuthModule,
     HttpModule,
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
+    /**HttpClientInMemoryWebApiModule.forRoot(
       BooksDBService, {dataEncapsulation: false, delay: 3000, caseSensitiveSearch: true}
-    ),
+    ), */
     AngularFireModule.initializeApp(environment.firebaseConfig, 'poke-app-one'),
     AngularFireAuthModule,
     AngularFireDatabaseModule

@@ -1,0 +1,20 @@
+<h1>{{poke?.name | titlecase}}</h1>
+<div class="row">
+  <div class="col-lg-8 col-md-6 col-sm-12 col-12">
+    
+  </div>
+  <div class="col-lg-4 col-md-6 col-sm-12 col-12">
+    <div class="row">
+      <div class="col-12">
+        <img [src]="poke?.sprites.front_default" class="book-image">
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <div class="col-12">
+        <button class="btn btn-primary" (click)="addFavorite()">
+          <i class="fa fa-heart"></i> Favorito</button>
+      </div>
+    </div>
+  </div>
+</div>

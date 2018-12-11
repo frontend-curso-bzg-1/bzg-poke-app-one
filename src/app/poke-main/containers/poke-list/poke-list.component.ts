@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PokeListService } from "../../services/poke-list.service";
+import { IPokeList } from '../../models/interfaces/poke-list';
 //import { books } from "../../../books";
 
 @Component({
@@ -9,17 +10,22 @@ import { PokeListService } from "../../services/poke-list.service";
 })
 export class PokeListComponent implements OnInit {
 
-  books : any[] = [];
+  pokeList: IPokeList;
 
   constructor(private pokeService: PokeListService) { }
 
-  ngOnInit() {
-    //this.books = books.items;
-    this.pokeService.getBooks().subscribe(
-      books => {
-        this.books = books.items;
+  ngOnInit() {    
+    this.pokeService.list()
+    .subscribe(
+      list => {
+        this.pokeList = list;
+        this.pokeList.results = this.pokeList.results.slice(0,20);
       }
     );
+  }
+
+  addFavorite(poke) {
+    this.pokeService.addFavorite(poke);
   }
 
 }

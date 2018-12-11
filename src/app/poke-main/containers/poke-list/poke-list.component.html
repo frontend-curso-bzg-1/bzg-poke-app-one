@@ -1,15 +1,5 @@
 <div class="row" id="books">
-  <div *ngFor="let book of books" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-2">
-      <div class="card">
-          <div class="card-header">
-              {{book.volumeInfo.title}}
-          </div>
-          <img class="card-img-top" src="{{book.volumeInfo.imageLinks.smallThumbnail}}" />
-          <div class="card-body">
-              <p class="card-text">{{book.volumeInfo.publisher}}</p>
-              <p class="card-text">{{book.volumeInfo.publishedDate}}</p>
-              <a [routerLink]="['../detail', book.id]" class="btn btn-primary col-12 col-md-auto col-lg-auto">Ver Detalle</a>
-          </div>
-      </div>
-  </div>
+    <div *ngFor="let pokemon of pokeList?.results" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+        <app-poke-card [poke]="pokemon" (favorite)="addFavorite($event)"></app-poke-card>
+    </div>
 </div>

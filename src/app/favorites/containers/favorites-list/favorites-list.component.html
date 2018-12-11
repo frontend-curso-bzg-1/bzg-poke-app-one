@@ -1,3 +1,5 @@
-<p>
-  favorites-list works!
-</p>
+<div class="row" id="books">
+  <div *ngFor="let pokemon of pokeList" class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+      <app-poke-favorite-card [poke]="pokemon"></app-poke-favorite-card>
+  </div>
+</div>
