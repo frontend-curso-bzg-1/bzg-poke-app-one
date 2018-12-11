@@ -1,11 +1,14 @@
+import { VARS_CONFIG } from "./env_vars";
+
 export const environment = {
   production: true,
+  apiUrl: 'https://pokeapi.co/api/v2/',
   firebaseConfig: {
-    apiKey: "AIzaSyAD5GpU4puFBFZhfaDAeKqi-RWQYvA68Kw",
-    authDomain: "poke-app-one.firebaseapp.com",
-    databaseURL: "https://poke-app-one.firebaseio.com",
-    projectId: "poke-app-one",
-    storageBucket: "poke-app-one.appspot.com",
-    messagingSenderId: "222846386474"
+    apiKey: VARS_CONFIG.APIKEY,
+    authDomain: VARS_CONFIG.AUTHDOMAIN,
+    databaseURL: VARS_CONFIG.DATABASEURL,
+    projectId: VARS_CONFIG.PROJECTID,
+    storageBucket: VARS_CONFIG.STORAGEBUCKET,
+    messagingSenderId: VARS_CONFIG.MESSAGINGIDSENDER
   }
 };
