@@ -19,7 +19,7 @@ export class PokeListComponent implements OnInit {
     .subscribe(
       list => {
         this.pokeList = list;
-        this.pokeList.results = this.pokeList.results.slice(0,20);
+        this.pokeList.results = this.pokeList.results.slice(0,50);
       }
     );
   }

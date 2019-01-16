@@ -10,6 +10,9 @@ import { AuthModule } from "./auth/auth.module";
 import { AngularFireModule } from "@angular/fire";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 import { AngularFireDatabaseModule } from "@angular/fire/database";
+import { StoreModule } from "@ngrx/store";
+import { StoreDevtoolsModule } from "@ngrx/store-devtools";
+import { reducers, metaReducer } from "./reducers";
 
 import { AppComponent } from './app.component';
 import { routes } from "./routes";
@@ -31,7 +34,13 @@ import { environment } from "../environments/environment";
     ), */
     AngularFireModule.initializeApp(environment.firebaseConfig, 'poke-app-one'),
     AngularFireAuthModule,
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    StoreModule.forRoot(reducers, { metaReducers: metaReducer }),
+    StoreDevtoolsModule.instrument({
+      name: 'Bzg Poke App',
+      logOnly: environment.production,
+      maxAge: 30
+    })
 
   ],
   providers: [],

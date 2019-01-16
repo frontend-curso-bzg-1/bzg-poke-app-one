@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 import { RouterModule } from "@angular/router";
 import { AlertsModule } from "../alerts/alerts.module";
 import { CoreComponent } from './containers/core/core.component';
@@ -17,6 +18,7 @@ import { routes } from "./routes.core";
   declarations: [CoreComponent, TopNavBarComponent, AsideLeftComponent, MainContentComponent, HeaderAsideLeftComponent, MainMenuComponent, TopSearchFormComponent, DetailBookComponent],
   imports: [
     CommonModule,
+    BrowserAnimationsModule,
     RouterModule.forChild(routes),
     AlertsModule
   ],

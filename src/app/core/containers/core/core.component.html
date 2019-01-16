@@ -5,7 +5,7 @@
     </div>
   </div>
   <div class="row body-content">
-    <app-aside-left class="col-3 left-aside"></app-aside-left>    
+    <app-aside-left class="col-3 left-aside" [@asideAnimation]="state"  [ngClass]="(state == 'close')? 'aside-close': ''"></app-aside-left>    
     <div class="col-9 main-section">
       <app-main-content></app-main-content>
     </div>        

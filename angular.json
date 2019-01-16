@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/bzg-poke-app",
+            "outputPath": "/home/andresciceri/Projects/deployments/firebase/bzg-poke-app-one/public/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
